@@ -1,0 +1,13 @@
+#!/bin/bash
+
+clear
+
+echo "# setting up new variables #"
+export SOME_RANDOM_VAR="Some_Random_Value"
+export ANOTHER_RANDOM_VAR="ANOTHER_RANDOM_VALUE"
+
+echo "# pulling new variables #"
+echo "SOME_RANDOM_VAR =" $(python ./get_env_variable.py 'SOME_RANDOM_VAR')
+echo "ANOTHER_RANDOM_VAR =" $(python ./get_env_variable.py 'ANOTHER_RANDOM_VAR')
+
+echo "# we're done #"
